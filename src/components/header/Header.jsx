@@ -9,7 +9,7 @@ const Header = () => {
       <nav className={s.nav}>
         <NavLink to="/">
           <svg width="104" height="16">
-            <use href="/public/icons.svg#icon-Logo"></use>
+            <use href="/icons.svg#icon-Logo"></use>
           </svg>
         </NavLink>
         <ul className={s.list}>
