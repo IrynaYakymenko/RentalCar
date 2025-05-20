@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/header/header";
+
 import s from "./HomePage.module.css";
 
 const HomePage = () => {

@@ -3,8 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage/HomePage";
 import CatalogPage from "./pages/catalogPage/CatalogPage";
 import NotFound from "./pages/notFound/NotFound";
-import Header from "./components/header/header";
+
 import CarDetailsPage from "./pages/carDetailsPage/CarDetailsPage";
+import Header from "./components/header/Header";
 
 function App() {
   return (
