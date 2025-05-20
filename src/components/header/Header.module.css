@@ -1,0 +1,25 @@
+.common {
+  background-color: var(--badges);
+  margin-bottom: 4px;
+  padding: 26px 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 120px;
+}
+
+.list {
+  display: flex;
+  gap: 32px;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--hover-blue);
+}
+
+.active {
+  color: var(--hover-blue);
+  text-decoration: none;
+}

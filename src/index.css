@@ -1,0 +1,85 @@
+@import url("modern-normalize/modern-normalize.css");
+
+:root {
+  /* Fonts */
+
+  --font-family: "Manrope", sans-serif;
+
+  /* colors */
+
+  --black: #101828;
+  --grey: #8e929a;
+  --blue: #3470ff;
+  --hover-blue: #0b44cd;
+  --light-grey: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  all: unset;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0%;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
