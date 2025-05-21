@@ -2,7 +2,11 @@ import React from "react";
 import ReservForm from "../../components/reservForm/ReservForm";
 
 const CatalogPage = () => {
-  return <div>Catalog</div>;
+  return (
+    <div>
+      <ReservForm />
+    </div>
+  );
 };
 
 export default CatalogPage;
