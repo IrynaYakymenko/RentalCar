@@ -6,6 +6,7 @@ import NotFound from "./pages/notFound/NotFound";
 
 import CarDetailsPage from "./pages/carDetailsPage/CarDetailsPage";
 import Header from "./components/header/Header";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="catalog/:id" element={<CarDetailsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   );
 }
