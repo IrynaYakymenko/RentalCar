@@ -16,3 +16,17 @@ export const fetchCars = createAsyncThunk(
     }
   }
 );
+
+export const fetchCarById = createAsyncThunk(
+  "cars/fetchCarById",
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.get(
+        `https://car-rental-api.goit.global/cars/${id}`
+      );
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

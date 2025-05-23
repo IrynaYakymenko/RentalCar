@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./ListCar.module.css";
+import { Link } from "react-router-dom";
 
 const ItemCar = ({ car }) => {
   const city = car.address.split(",")[1]?.trim();
@@ -22,8 +23,9 @@ const ItemCar = ({ car }) => {
         {city} | {country} | {car.rentalCompany} | {car.type} |{" "}
         {car.mileage.toLocaleString("uk-UA")} km
       </div>
-
-      <button className={s.button}>Read more</button>
+      <Link to={`/catalog/${car.id}`}>
+        <button className={s.button}>Read more</button>
+      </Link>
     </li>
   );
 };

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCars } from "./operations";
+import { fetchCarById, fetchCars } from "./operations";
 
 const initialState = {
   items: [],
@@ -7,6 +7,10 @@ const initialState = {
   error: null,
   page: 1,
   totalPages: 1,
+
+  selectedCar: null,
+  isLoadingSelectedCar: false,
+  errorSelectedCar: null,
 };
 
 const carsSlice = createSlice({
@@ -15,6 +19,11 @@ const carsSlice = createSlice({
   reducers: {
     clearCars: (state) => {
       state.items = [];
+    },
+    clearSelectedCar: (state) => {
+      state.selectedCar = null;
+      state.isLoadingSelectedCar = false;
+      state.errorSelectedCar = null;
     },
   },
   extraReducers: (builder) => {
@@ -41,9 +50,22 @@ const carsSlice = createSlice({
       .addCase(fetchCars.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+      .addCase(fetchCarById.pending, (state) => {
+        state.isLoadingSelectedCar = true;
+        state.errorSelectedCar = null;
+        state.selectedCar = null;
+      })
+      .addCase(fetchCarById.fulfilled, (state, action) => {
+        state.isLoadingSelectedCar = false;
+        state.selectedCar = action.payload;
+      })
+      .addCase(fetchCarById.rejected, (state, action) => {
+        state.isLoadingSelectedCar = false;
+        state.errorSelectedCar = action.payload;
       });
   },
 });
 
-export const { clearCars } = carsSlice.actions;
+export const { clearCars, clearSelectedCar } = carsSlice.actions;
 export default carsSlice.reducer;
