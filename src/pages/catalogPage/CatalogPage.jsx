@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCars } from "../../redux/operations";
-import ListCar from "../../components/List/ListCar";
+
 import {
   selectCars,
   selectError,
@@ -9,9 +9,11 @@ import {
   selectPage,
   selectTotalPages,
 } from "../../redux/selectors";
-import Loader from "../../components/Loader/Loader";
+
 import s from "./CatalogPage.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import Loader from "../../components/Loader/Loader";
+import ListCar from "../../components/List/ListCar";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
