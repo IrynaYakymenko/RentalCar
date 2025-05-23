@@ -1,0 +1,20 @@
+.button {
+  max-width: 156px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+  text-align: center;
+  display: block;
+  margin: 0 auto 124px auto;
+  border: 1px solid var(--blue);
+  max-height: 44px;
+  border-radius: 12px;
+  padding: 12px 51px;
+  display: block;
+}
+.button:hover,
+.button:active {
+  border: 1px solid var(--hover-blue);
+  cursor: pointer;
+}

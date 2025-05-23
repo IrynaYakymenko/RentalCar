@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+
+  background-image: url(../../images/Hero-2x-min.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: calc(100vh - 77px);
+}
+
+.title {
+  text-align: center;
+  color: var(--white);
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  padding-top: 0;
+}
+
+.text {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  margin: 16px auto 0 auto;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+  text-align: center;
+  display: block;
+  margin: 40px auto 60px auto;
+  background-color: var(--blue);
+  width: 276px;
+  max-height: 44px;
+  border-radius: 12px;
+  padding: 12px 0;
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--hover-blue);
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.main {
+  background-image: url(../../images/Hero-2x-min.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 60px;
+}
+
+.title {
+  color: var(--white);
+  margin: 0 auto;
+  padding-top: 436px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-align: center;
+}
