@@ -1,0 +1,57 @@
+.container {
+  padding: 0 120px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.gridItem {
+  margin-bottom: 48px;
+}
+
+.image {
+  border-radius: 14px;
+}
+
+.nameCar {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.model {
+  color: var(--blue);
+}
+
+.details {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--grey);
+  margin-bottom: 28px;
+}
+
+.button {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+  text-align: center;
+  display: block;
+  margin: auto;
+  background-color: var(--blue);
+  max-height: 44px;
+  border-radius: 12px;
+  padding: 12px 0;
+  display: block;
+}
+.button:hover,
+.button:active {
+  background-color: var(--hover-blue);
+  cursor: pointer;
+}

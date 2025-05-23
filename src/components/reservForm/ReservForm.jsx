@@ -74,10 +74,9 @@ const ReservForm = () => {
           <Field
             as="textarea"
             className={s.input}
-            type="text"
             name="comment"
             placeholder="Comment"
-            row={3}
+            rows={3}
           />
           <button type="submit" className={s.button}>
             Send
