@@ -1,6 +1,7 @@
 import React from "react";
 
 import s from "./HomePage.module.css";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -10,9 +11,10 @@ const HomePage = () => {
         <p className={s.text}>
           Reliable and budget-friendly rentals for any journey
         </p>
-        <button className={s.button} type="submit">
+
+        <NavLink className={s.button} to="catalog">
           View Catalog
-        </button>
+        </NavLink>
       </div>
     </div>
   );

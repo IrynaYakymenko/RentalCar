@@ -13,13 +13,9 @@
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  text-align: center;
   color: var(--white);
   margin: 0 auto;
-
   font-weight: 700;
   font-size: 60px;
   line-height: 120%;
@@ -44,10 +40,10 @@
   display: block;
   margin: 40px auto 60px auto;
   background-color: var(--blue);
-  max-width: 276px;
+  width: 276px;
   max-height: 44px;
   border-radius: 12px;
-  padding: 12px 99px;
+  padding: 12px 0;
 }
 
 .button:hover,
