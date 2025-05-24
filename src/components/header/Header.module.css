@@ -13,6 +13,9 @@
   display: flex;
   gap: 32px;
 }
+.link {
+  color: var(--black);
+}
 
 .link:hover,
 .link:focus {

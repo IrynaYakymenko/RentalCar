@@ -9,11 +9,10 @@ import {
   selectPage,
   selectTotalPages,
 } from "../../redux/selectors";
-
-import s from "./CatalogPage.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../components/Loader/Loader";
 import ListCar from "../../components/List/ListCar";
+import s from "./CatalogPage.module.css";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();

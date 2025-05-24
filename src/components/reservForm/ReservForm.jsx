@@ -38,7 +38,7 @@ const ReservForm = () => {
 
   return (
     <div className={s.container}>
-      <p className={s.heading}>Book your car now</p>
+      <h2 className={s.heading}>Book your car now</h2>
       <p className={s.text}>Stay connected! We are always ready to help you.</p>
       <Formik
         onSubmit={handleSubmit}

@@ -1,9 +1,12 @@
 import React from "react";
 import s from "./Header.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const addActive = ({ isActive }) => (isActive ? s.active : s.link);
+  const location = useLocation();
+
+  const isExactHome = location.pathname === "/";
+  const isExactCatalog = location.pathname === "/catalog";
   return (
     <header className={s.common}>
       <nav className={s.nav}>
@@ -14,12 +17,15 @@ const Header = () => {
         </NavLink>
         <ul className={s.list}>
           <li>
-            <NavLink className={addActive} to="/">
+            <NavLink className={isExactHome ? s.active : s.link} to="/">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink className={addActive} to="catalog">
+            <NavLink
+              className={isExactCatalog ? s.active : s.link}
+              to="catalog"
+            >
               Catalog
             </NavLink>
           </li>
