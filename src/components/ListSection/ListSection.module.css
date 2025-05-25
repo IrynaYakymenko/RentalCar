@@ -1,0 +1,18 @@
+.listSection {
+  margin-top: 100px;
+}
+
+.listHeading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.specsList li {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}

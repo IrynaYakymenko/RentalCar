@@ -12,6 +12,7 @@ import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import s from "./CarDetailsPage.module.css";
 import ReservForm from "../../components/ReservForm/ReservForm";
+import ListSection from "../../components/ListSection/ListSection";
 
 const CarDetailsPage = () => {
   const { id } = useParams();
@@ -34,6 +35,29 @@ const CarDetailsPage = () => {
 
   const city = selectedCar.address.split(",")[1]?.trim();
   const country = selectedCar.address.split(",")[2]?.trim();
+
+  const rentalConditions = selectedCar.rentalConditions.map((cond) => ({
+    icon: "icon-check-circle",
+    text: cond,
+  }));
+
+  const accessoriesAndFuncs = [
+    ...selectedCar.accessories,
+    ...selectedCar.functionalities,
+  ].map((item) => ({
+    icon: "icon-check-circle",
+    text: item,
+  }));
+
+  const carSpecifications = [
+    { icon: "icon-calendar", text: `Year: ${selectedCar.year}` },
+    { icon: "icon-car", text: `Type: ${selectedCar.type}` },
+    {
+      icon: "icon-fuel-pump",
+      text: `Fuel Consumption: ${selectedCar.fuelCosumption}`,
+    },
+    { icon: "icon-gear", text: `Engine Size: ${selectedCar.engineSize}` },
+  ];
 
   return (
     <div className={s.container}>
@@ -62,101 +86,13 @@ const CarDetailsPage = () => {
 
         <p className={s.price}>${selectedCar.rentalPrice}</p>
         <p>{selectedCar.description}</p>
-        <div className={s.listSection}>
-          <h3 className={s.listHeading}>Rental Conditions:</h3>
-          <ul className={s.specsList}>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.rentalConditions[0]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.rentalConditions[1]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.rentalConditions[2]}
-            </li>
-          </ul>
-        </div>
 
-        <div className={s.listSection}>
-          <h3 className={s.listHeading}>Car Specifications:</h3>
-          <ul className={s.specsList}>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-calendar"></use>
-              </svg>
-              Year: {selectedCar.year}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-car"></use>
-              </svg>
-              Type: {selectedCar.type}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-fuel-pump"></use>
-              </svg>
-              Fuel Consumption: {selectedCar.fuelCosumption}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-gear"></use>
-              </svg>
-              Engine Size: {selectedCar.engineSize}
-            </li>
-          </ul>
-        </div>
-
-        <div className={s.listSection}>
-          <h3 className={s.listHeading}>Accessories and functionalities:</h3>
-          <ul className={s.specsList}>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.accessories[0]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.accessories[1]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.accessories[2]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.functionalities[0]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.functionalities[1]}
-            </li>
-            <li>
-              <svg width="16" height="16">
-                <use href="/icons.svg#icon-check-circle"></use>
-              </svg>
-              {selectedCar.functionalities[2]}
-            </li>
-          </ul>
-        </div>
+        <ListSection title="Rental Conditions:" items={rentalConditions} />
+        <ListSection title="Car Specifications:" items={carSpecifications} />
+        <ListSection
+          title="Accessories and functionalities:"
+          items={accessoriesAndFuncs}
+        />
       </div>
     </div>
   );
