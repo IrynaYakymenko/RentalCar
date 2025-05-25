@@ -1,12 +1,41 @@
-# React + Vite
+# Rental Car App 🚗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://rental-car-jade.vercel.app/)
 
-Currently, two official plugins are available:
+Це застосунок для перегляду, фільтрації та вибору автомобілів в оренду. Реалізований за допомогою **React**, **Redux Toolkit** та сучасних підходів до організації фронтенду.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Основні сторінки:
 
-## Expanding the ESLint configuration
+- Домашня сторінка
+- Сторінка каталога
+- Сторінка окремого автомобіля
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔧 Технології
+
+- **React** + **Vite**
+- **Redux Toolkit** + `createAsyncThunk`
+- **React Router**
+- **Axios** для запитів до API
+- **Vercel** для деплою
+
+---
+
+## ⚙️ Функціонал
+
+- 📋 Список авто з пагінацією
+- 🔍 Фільтрація:
+  - за брендом
+  - за ціною
+  - за пробігом
+- ❤️ Обране (favorite cars)
+- 📄 Детальна інформація про авто
+- 🌐 Плавна маршрутизація (`react-router-dom`)
+- 💾 Кешування результатів при переході між сторінками
+- 🔄 Лоадери, повідомлення про помилки
+- 📱 Адаптивний інтерфейс
+
+---
+
+Розроблено у 2025 році by Ірина Якименко

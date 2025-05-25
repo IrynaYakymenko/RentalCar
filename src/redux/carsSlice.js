@@ -44,6 +44,10 @@ const carsSlice = createSlice({
         state.isLoading = false;
         const { cars, page, totalPages } = action.payload;
 
+        if (!Array.isArray(state.items)) {
+          console.error("state.items is not an array:", state.items);
+          state.items = [];
+        }
         if (page === 1) {
           state.items = cars;
           state.page = 1;
