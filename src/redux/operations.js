@@ -5,10 +5,10 @@ const BASE_URL = "https://car-rental-api.goit.global";
 
 export const fetchCars = createAsyncThunk(
   "cars/fetchCars",
-  async ({ page = 1 } = {}, thunkAPI) => {
+  async (filters = {}, thunkAPI) => {
     try {
       const response = await axios.get(`${BASE_URL}/cars`, {
-        params: { page },
+        params: filters,
       });
       return response.data;
     } catch (error) {
@@ -24,6 +24,18 @@ export const fetchCarById = createAsyncThunk(
       const response = await axios.get(
         `https://car-rental-api.goit.global/cars/${id}`
       );
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchBrands = createAsyncThunk(
+  "cars/fetchBrands",
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get(`${BASE_URL}/brands`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
